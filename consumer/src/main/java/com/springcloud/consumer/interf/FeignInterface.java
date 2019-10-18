@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(name="provider",configuration = ServiceFeignConfiguration.class)
 public interface FeignInterface {
-	@RequestMapping(value="/api/v1/",method = RequestMethod.GET)
+	@RequestMapping(value="/api/v1",method = RequestMethod.GET)
 	public String home1(@RequestParam(value = "name") String name);
 }
