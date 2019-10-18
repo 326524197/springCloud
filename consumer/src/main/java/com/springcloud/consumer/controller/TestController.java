@@ -26,18 +26,18 @@ public class TestController {
     @Autowired
     LoginInterface loginInterface;
 
-    // 调用login接口失败
+    // 调用login接口
     @RequestMapping(value = "/v1", method = RequestMethod.GET)
     public String v1() {
-        loginInterface.hello();
-        return "test1";
+        String result = loginInterface.hello();
+        return result;
     }
 
-    // 调用rember接口失败
+    // 调用member接口
     @RequestMapping(value = "/v3", method = RequestMethod.GET)
     public String v3() {
-        memberInterface.hello();
-        return "test3";
+        String result = memberInterface.hello();
+        return result;
     }
 
     @RequestMapping(value = "/v5", method = RequestMethod.GET)
@@ -45,7 +45,6 @@ public class TestController {
         aExampleInterface.get();
         return "test5";
     }
-
 
 
 }
