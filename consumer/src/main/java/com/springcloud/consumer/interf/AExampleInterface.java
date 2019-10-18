@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @FeignClient("cloud-example-a")
 @RequestMapping("/api/foo")
-public interface FooService {
+public interface AExampleInterface {
     @GetMapping
     void get();
 
