@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient("aiedu-cloud-login-restfulapp")
+@RequestMapping("/login")
 public interface LoginInterface {
     @RequestMapping(value = "/api/v1",method = RequestMethod.GET)
     String hello();

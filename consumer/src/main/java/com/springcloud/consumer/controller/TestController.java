@@ -26,24 +26,25 @@ public class TestController {
     @Autowired
     LoginInterface loginInterface;
 
-    // 调用login接口
+    // 调用login服务接口
     @RequestMapping(value = "/v1", method = RequestMethod.GET)
     public String v1() {
         String result = loginInterface.hello();
         return result;
     }
 
-    // 调用member接口
+    // 调用member服务接口
     @RequestMapping(value = "/v3", method = RequestMethod.GET)
     public String v3() {
         String result = memberInterface.hello();
         return result;
     }
 
+    // 调用 example-a服务接口
     @RequestMapping(value = "/v5", method = RequestMethod.GET)
     public String v5() {
         aExampleInterface.get();
-        return "test5";
+        return "调用 example-a服务接口url:/api/foo";
     }
 
 
